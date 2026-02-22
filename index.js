@@ -6,6 +6,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get('/', (req, res) => {
+    res.status(200).send("Hello tailor.")
+})
+
 app.post('/customer/add/new', async (req, res) => {
     try {
         const data = req.body
